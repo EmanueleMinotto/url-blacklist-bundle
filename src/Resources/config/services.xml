@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
+    <services>
+        <service class="EmanueleMinotto\UrlBlacklistBundle\Validator\Constraints\BlacklistedDomainValidator" id="url_blacklist.blacklisted_domain">
+            <argument id="doctrine.orm.entity_manager" type="service"/>
+            <argument id="pdp.parser" type="service"/>
+            <tag name="validator.constraint_validator"/>
+        </service>
+        <service class="EmanueleMinotto\UrlBlacklistBundle\Validator\Constraints\BlacklistedUrlValidator" id="url_blacklist.blacklisted_url">
+            <argument id="doctrine.orm.entity_manager" type="service"/>
+            <tag name="validator.constraint_validator"/>
+        </service>
+    </services>
+</container>
