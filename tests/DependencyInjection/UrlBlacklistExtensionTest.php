@@ -6,7 +6,7 @@ use EmanueleMinotto\UrlBlacklistBundle\Validator\Constraints\BlacklistedDomainVa
 use EmanueleMinotto\UrlBlacklistBundle\Validator\Constraints\BlacklistedUrlValidator;
 use Matthias\SymfonyDependencyInjectionTest\PhpUnit\AbstractExtensionTestCase;
 
-class BlacklistExtensionTest extends AbstractExtensionTestCase
+class UrlBlacklistExtensionTest extends AbstractExtensionTestCase
 {
     public function testServices()
     {
@@ -34,7 +34,7 @@ class BlacklistExtensionTest extends AbstractExtensionTestCase
     protected function getContainerExtensions()
     {
         return [
-            new BlacklistExtension(),
+            new UrlBlacklistExtension(),
         ];
     }
 }
