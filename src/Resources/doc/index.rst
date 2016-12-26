@@ -54,6 +54,8 @@ need to update your schema with:
 
 or even better, write and execute a new migration with:
 
+.. code-block:: terminal
+
     $ php bin/console doctrine:migrations:diff
     $ php bin/console doctrine:migrations:migrate
 
